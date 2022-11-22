@@ -46,10 +46,11 @@ class model {
         // nur karten welche den suchbegriff beinhalten werden gerendert
         items.forEach((i) => {
           if (!i.innerHTML.toLowerCase().includes(query.trim().toLowerCase())) {
-            i.parentElement.parentElement.style.display = 'none';
+            i.parentElement.parentElement.parentElement.style.display = 'none';
           } else {
             i.innerHTML.indexOf;
-            i.parentElement.parentElement.style.display = 'inherit';
+            i.parentElement.parentElement.parentElement.style.display =
+              'inherit';
           }
         });
       });
@@ -144,7 +145,7 @@ class model {
       const items = document.querySelectorAll('.name');
       console.log(items);
       items.forEach((i) => {
-        i.parentElement.parentElement.style.display = 'inherit';
+        i.parentElement.parentElement.parentElement.style.display = 'inherit';
       });
       document.querySelector('.searchField').value = '';
     });
